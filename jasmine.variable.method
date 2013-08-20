@@ -1,0 +1,5 @@
+# name: jasmineTestMethodVariable
+# key: jvarm
+# --
+
+var ${1:variable}_ = function() {};

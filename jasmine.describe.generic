@@ -1,0 +1,47 @@
+#name: describeGeneric
+# key: descg
+# --
+
+goog.require('goog.string');
+goog.require('src.base.control.${1:controlName}');
+
+goog.provide('src.test.control.$1.whenInitializing${1:$(transform-text text)}');
+
+/**
+ @export
+ */
+src.test.control.$1.whenInitializing${1:$(transform-text text)}.describe = function () {
+    //Using
+    var Current_ = src.base.control.$1;
+    
+    
+    //Fields
+    
+    
+    //Test Hooks
+    beforeEach(function() {
+
+    });
+    
+    
+    //Support Methods
+    var callTheMethod_ = function() {
+    };
+    
+    
+    //Test Methods
+};
+
+
+describe('When initializing an $1, it', function() {
+    src.test.control.$1.whenInitializing${1:$(transform-text text)}.describe();
+});
+
+
+
+goog.provide('src.base.control.$1');
+
+
+
+
+--namespace="src.test.control.$1.whenInitializing${1:$(transform-text text)}" ^

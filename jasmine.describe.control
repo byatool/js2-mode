@@ -1,0 +1,112 @@
+#name :describeControl
+# key: descc
+# --
+
+goog.require('goog.string');
+goog.require('src.base.control.${1:controlName}');
+
+goog.provide('src.test.control.$1.whenInitializing${1:$(transform-text text)}');
+
+/**
+ @export
+ */
+src.test.control.$1.whenInitializing${1:$(transform-text text)}.describe = function () {
+    //Using
+    var Current_ = src.base.control.$1;
+    
+    
+    //Fields
+    var ParentContainerId_ = goog.string.getRandomString();
+    var ParentContainerClass_ = goog.string.getRandomString();
+
+    var createADiv_;
+    var options_;
+    var parentContainer_;
+    
+    
+    //Test Hooks
+    beforeEach(function() {
+        parentContainer_ = {};
+
+        options_ = {};
+        options_[Current_.ContainerClass] = ParentContainerClass_;
+        options_[Current_.ContainerId] = ParentContainerId_;
+    });
+    
+    
+    //Support Methods
+    var callTheMethod_ = function() {
+        return Current_.initialize(options_, createADiv_);
+    };
+    
+    
+    //Test Methods
+    
+    it('should create a parent container.', function() {
+        var methodWasCalled = false;
+        
+        createADiv_ = function(attributes) {
+            methodWasCalled = methodWasCalled ||
+            (attributes['id'] === options_[Current_.ContainerId] &&
+            attributes['class'] === options_[Current_.ContainerClass]);
+
+            return parentContainer_;
+        };
+        callTheMethod_();
+        
+        expect(methodWasCalled).toBe(true);
+    });
+    
+    
+    it('should return the parent container.', function() {
+        expect(callTheMethod_()).toBe(parentContainer_);
+    });
+};
+
+
+describe('When initializing an $1, it', function() {
+    src.test.control.$1.whenInitializing${1:$(transform-text text)}.describe();
+});
+
+
+
+goog.provide('src.base.control.$1');
+
+/**
+ @const
+ @type {string}
+ @export
+ */
+src.base.control.$1.ContainerId = 'containerId';
+
+
+/**
+ @const
+ @type {string}
+ @export
+ */
+src.base.control.$1.ContainerClass = 'containerClass';
+
+
+/**
+ @param {Array} options The needed options to build the form.
+ @param {?function} createADiv The method used  to create a 
+ div element.
+ @return {Object} The created control.
+ @export
+ */
+src.base.control.$1.initialize = function(options, createADiv) {
+  createADiv = createADiv ? createADiv : src.base.helper.domCreation.div;
+
+  var Current__ = src.base.control.$1;
+
+  var container = createADiv({
+      'id': options[Current__.ContainerId],
+      'class': options[Current__.ContainerClass]
+      });
+    
+  return container;
+};
+
+
+--namespace="src.test.control.$1.whenInitializing${1:$(transform-text text)}" ^

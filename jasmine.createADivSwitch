@@ -1,0 +1,12 @@
+# name: jasmineCreateADivSwitch
+# key: jcads
+# --
+
+createADiv_ = function(attributes){
+  switch(attributes['class']) {
+    case Current_.${1:First}:
+      return ${2:Second};
+    break;               
+    default:
+      return $2;                      
+  }};

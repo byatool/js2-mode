@@ -1,0 +1,16 @@
+#name :describe
+# key: desc
+# --
+describe('When ${1:when}, it', function() {
+  //Fields
+  
+  //Test Hooks
+  beforeEach(function() {
+
+  });
+
+  //Support Methods
+
+  //Test Methods
+    
+});

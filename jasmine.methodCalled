@@ -1,0 +1,6 @@
+# name: methodCalledWasTrue
+# key: jamc
+# --
+var methodWasCalled = false;
+
+expect(methodWasCalled).toBe(true);

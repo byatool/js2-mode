@@ -1,0 +1,8 @@
+# name: jasmineCreateADiv
+# key: jcad
+# --
+
+createADiv_ = function(attributes){
+methodWasCalled = methodWasCalled ||
+attributes['class'] === ${1:className};
+};

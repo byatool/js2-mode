@@ -1,0 +1,7 @@
+# name: googArrayCount 
+# key: goac
+# --
+
+goog.array.count(${1:list}, function(currentItem){
+return ${2:equality};
+});

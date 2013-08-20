@@ -1,0 +1,9 @@
+# name: PublicConstantString
+# key: pcs
+# --
+
+/**
+ @const
+ @type {string}
+ @export
+*/

@@ -1,0 +1,7 @@
+# name: closureCreateADiv
+# key: gcad
+# --
+
+var ${1:name} = createADiv({
+      'class': current.${2:class}
+    });

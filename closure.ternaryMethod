@@ -1,0 +1,5 @@
+# name: googTernaryMethod
+# key: gotm
+# --
+
+${1:method} = $1 ? $1 : ${2:other};

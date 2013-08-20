@@ -1,0 +1,16 @@
+# name: jasmineCrateADivTest
+# key: itscad
+# --
+it('should create the ${1:Name} holder.', function() {
+    var methodWasCalled = false;
+    
+    createADiv_ = function(attributes){
+      methodWasCalled = methodWasCalled ||
+        attributes['class'] === Current_.${2:className};
+    };
+    
+    callTheMethod_();
+    
+    expect(methodWasCalled).toBe(true);
+  });
+  

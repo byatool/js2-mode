@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: itsmc
+# key: itsmc
+# --
+
+it('should ${1:should}', function() {
+  var methodWasCalled = false;
+
+  callTheMethod_();
+
+  expect(methodWasCalled).toBe(true);
+});

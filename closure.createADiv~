@@ -1,0 +1,8 @@
+# name: closureCreateADiv
+# key: gcad
+# --
+
+createADiv_ = function(attributes){
+methodWasCalled = methodWasCalled ||
+attributes['class'] === ${1:className};
+};

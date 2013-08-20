@@ -1,0 +1,6 @@
+# name: googPrivateMethod
+# key: gopm
+# --
+/**
+@private
+*/

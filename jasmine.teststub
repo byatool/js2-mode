@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: it stub
+# key: itf
+# --
+
+it('should ${1:should}', function() {
+  expect('This is not').toBe('tested yet');
+});

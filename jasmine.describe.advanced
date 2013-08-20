@@ -1,0 +1,38 @@
+#name :describeAdvanced
+# key: desca
+# --
+goog.require('src.base.${1:namespace}');
+goog.provide('src.test.$1.${2:title}');
+
+/**
+ @export
+ */
+src.test.$1.$2.describe = function () {
+
+  //Using
+  var Current_ = src.base.$1;
+
+
+  //Fields
+  
+
+  //Test Hooks
+  beforeEach(function() {
+
+  });
+
+  //Support Methods
+  var callTheMethod_ = function() {
+
+  };
+
+
+  //Test Methods
+};
+
+
+describe('When ${3:when}, it', function() {
+
+  src.test.$1.$2.describe();
+    
+});

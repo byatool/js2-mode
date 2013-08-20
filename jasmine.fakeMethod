@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: JasmineFakeMethod
+# key: jafm
+# --
+var ${1:method} = function() {};

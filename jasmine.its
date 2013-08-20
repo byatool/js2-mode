@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: it
+# key: its
+# --
+
+it('should ${1:should}', function() {
+  expect(1).toBe(2);
+});

@@ -1,0 +1,49 @@
+#name :describeView
+# key: descv
+# --
+
+goog.require('goog.string');
+goog.require('src.site.view.${1:controlName}');
+
+goog.provide('src.test.view.$1.whenRefreshing${1:$(transform-text text)}');
+
+/**
+ @export
+ */
+src.test.view.$1.whenRefreshing${1:$(transform-text text)}.describe = function () {
+    //Using
+    var Current_ = src.site.view.$1;
+    
+    
+    //Fields
+ 
+    var options_;
+    var parentContainer_;
+    
+    
+    //Test Hooks
+    beforeEach(function() {
+        parentContainer_ = {};
+
+        options_ = {};
+ 
+    });
+    
+    
+    //Support Methods
+    var callTheMethod_ = function() {
+        return Current_.refresh(options_);
+    };
+    
+    
+    //Test Methods
+    
+};
+
+
+describe('When refreshing an $1, it', function() {
+    src.test.view.$1.whenRefreshing${1:$(transform-text text)}.describe();
+});
+
+
+//--namespace="src.test.view.$1.whenRefreshing${1:$(transform-text text)}" ^

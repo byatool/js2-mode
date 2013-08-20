@@ -1,0 +1,5 @@
+# name: jasmineTestVar
+# key: jvar
+# --
+
+var ${1:variable}_ = {};

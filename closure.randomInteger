@@ -1,0 +1,5 @@
+# name: googRandomInteger 
+# key: gori
+# --
+
+var ${1:item} = goog.math.randomInt();

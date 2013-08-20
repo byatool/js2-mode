@@ -1,0 +1,4 @@
+# name: googProvide
+# key: gopr
+# --
+goog.provide('${1:namespace}');

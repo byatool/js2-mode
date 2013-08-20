@@ -1,0 +1,17 @@
+# name: jasmineAppendChildTest
+# key: itsac
+# --
+
+it('should append the ${1:child} to the ${2:parent}.', function() {
+    var methodWasCalled = false;
+    
+    appendChild_ = function(parent, child){
+      methodWasCalled = methodWasCalled || 
+        (parent === ${3:three} && child === ${4:four});
+    };
+    
+    callTheMethod_();
+    
+    expect(methodWasCalled).toBe(true);
+  });
+  

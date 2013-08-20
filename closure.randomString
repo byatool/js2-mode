@@ -1,0 +1,5 @@
+# name: googRandomString 
+# key: gors
+# --
+
+var ${1:item} = goog.string.getRandomString();

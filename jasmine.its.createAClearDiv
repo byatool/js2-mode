@@ -1,0 +1,38 @@
+# name: jasmineTestCreateAClearDiv
+# key: itsccd
+# --
+
+  it('should create a clear both div.', function() {
+    var methodWasCalled = false;
+    
+    createADiv_ = function(attributes){
+      methodWasCalled = methodWasCalled ||
+        attributes['class'] === 'clearBoth';
+    };
+    
+    callTheMethod_();
+    
+    expect(methodWasCalled).toBe(true);
+  });
+   
+  
+  it('should append the clear both div to the ${1:parent}.', function() {
+    var methodWasCalled = false;
+    var clearBothDiv = {};
+    
+    createADiv_ = function(attributes){
+      return attributes['class'] === 'clearBoth' ?
+        clearBothDiv :
+        parentContainer_;
+    };
+    
+    appendChild_ = function(parent, child){
+      methodWasCalled = methodWasCalled || 
+        (parent === ${2:name} && child === clearBothDiv);
+    };
+    
+    callTheMethod_();
+    
+    expect(methodWasCalled).toBe(true);
+  });
+  

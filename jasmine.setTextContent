@@ -1,0 +1,16 @@
+# name: jasmineSetTextContent
+# key: itsst
+# --
+
+it('should set the text of the ${1:name}.', function() {
+    var methodWasCalled = false;
+    
+    setTextContent_ = function(element, text){
+      methodWasCalled = methodWasCalled || 
+      (element === ${2:Element} && text === ${3:text})
+    };
+    
+    callTheMethod_();
+    
+    expect(methodWasCalled).toBe(true);
+  });
