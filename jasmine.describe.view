@@ -5,45 +5,113 @@
 goog.require('goog.string');
 goog.require('src.site.view.${1:controlName}');
 
-goog.provide('src.test.view.$1.whenRefreshing${1:$(transform-text text)}');
+goog.provide('src.test.view.$1.whenInitializing${1:$(transform-text text)}');
 
 /**
  @export
  */
-src.test.view.$1.whenRefreshing${1:$(transform-text text)}.describe = function () {
+src.test.view.$1.whenInitializing${1:$(transform-text text)}.describe = function () {
+
     //Using
     var Current_ = src.site.view.$1;
     
     
     //Fields
- 
+
+    var ContainerId_ = goog.string.getRandomString();
+
+    var createADiv_;
     var options_;
     var parentContainer_;
     
     
     //Test Hooks
+
     beforeEach(function() {
         parentContainer_ = {};
-
         options_ = {};
- 
+        options_[Current_.ContainerId] = ContainerId_;
+        createADiv_ = function(attributes){
+         switch(attributes['class']) {
+         case ContainerId_:
+              return parentContainer_;
+              break;               
+         default:
+           return parentContainer_;
+           break;
+      }};
     });
     
     
     //Support Methods
     var callTheMethod_ = function() {
-        return Current_.refresh(options_);
+        return Current_.initialize(options_, createADiv_);
     };
     
     
     //Test Methods
+
+    it('should create a parent container.', function() {
+        var methodWasCalled = false;
+        
+        createADiv_ = function(attributes) {
+            methodWasCalled = methodWasCalled ||
+            (attributes['id'] === ContainerId_&&
+            attributes['class'] === ContainerId_);
+
+            return parentContainer_;
+        };
+        callTheMethod_();
+        
+        expect(methodWasCalled).toBe(true);
+    });
     
+    
+    it('should return the parent container.', function() {
+        expect(callTheMethod_()).toBe(parentContainer_);
+    });    
+};
+
+
+goog.require('src.base.helper.domCreation');
+goog.provide('src.site.view.$1');
+
+
+/**
+ @const
+ @type {string}
+ @export
+ */
+src.site.view.$1.ContainerId = 'containerId';
+
+
+/**
+ @param {Array} options The needed options to build the form.
+ @param {?function} createADiv The method used  to create a 
+ div element.
+ @return {Object} The created control.
+ @export
+ */
+src.site.view.$1.initialize = function(options, createADiv) {
+
+  createADiv = createADiv ? 
+             createADiv : 
+             src.base.helper.domCreation.div;
+
+  var current = src.site.view.$1;
+
+  var container = createADiv({
+      'id': options[current.ContainerId],
+      'class': options[current.ContainerId]
+      });
+    
+  return container;
 };
 
 
 describe('When refreshing an $1, it', function() {
-    src.test.view.$1.whenRefreshing${1:$(transform-text text)}.describe();
+    src.test.view.$1.whenInitializing${1:$(transform-text text)}.describe();
 });
 
 
-//--namespace="src.test.view.$1.whenRefreshing${1:$(transform-text text)}" ^
+//--namespace="src.test.view.$1.whenInitializing${1:$(transform-text text)}" ^
