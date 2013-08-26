@@ -1,4 +1,0 @@
-# name: googAnonymousMethod
-# key: goam
-# --
-var ${1:method} = function(${2:}){};
