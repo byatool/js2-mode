@@ -1,0 +1,4 @@
+# name: googParamFunction
+# key: gopaf
+# --
+@param {function} ${1:name} ${2:description}.

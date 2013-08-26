@@ -1,0 +1,4 @@
+# name: googParamFunctionOptional
+# key: gopafo
+# --
+@param {?function} ${1:name} ${2:description}.
