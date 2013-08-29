@@ -1,0 +1,50 @@
+#name :describeViewSimple
+# key: descvs
+# --
+
+goog.require('goog.string');
+goog.require('src.site.view.${1:controlName}');
+
+goog.provide('src.test.view.$1.When${2:testName}');
+
+/**
+ @export
+ */
+src.test.view.$1.When$2.describe = function () {
+
+    //Using
+    var Current_ = src.site.view.$1;
+    
+    
+    //Fields
+
+    var options_;
+    var parentContainer_;
+    
+    
+    //Test Hooks
+
+    beforeEach(function() {
+        parentContainer_ = {};
+        options_ = {};
+    });
+    
+    
+    //Support Methods
+    var callTheMethod_ = function() {
+        return Current_.
+    };
+    
+    
+    //Test Methods
+
+};
+
+
+
+describe('When  , it', function() {
+    src.test.view.$1.When$2.describe();
+});
+
+
+//--namespace="src.test.view.$1.When$2" ^

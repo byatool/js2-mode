@@ -1,0 +1,4 @@
+# name: googParamString
+# key: gopas
+# --
+@param {string} ${1:name} ${2:description}.
