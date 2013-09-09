@@ -4,5 +4,6 @@
 
 createADiv_ = function(attributes){
 methodWasCalled = methodWasCalled ||
-attributes['class'] === ${1:className};
+(Constant_.${1:className} !== undefined &&
+attributes['class'] === Constant_.$1);
 };

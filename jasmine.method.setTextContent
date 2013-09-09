@@ -1,0 +1,8 @@
+# name: jasmineSetTextContent
+# key: jstc
+# --
+
+setTextContent_ = function(element, text){
+methodWasCalled = methodWasCalled ||
+(element === ${1:element} &&
+text === ${2:text});
