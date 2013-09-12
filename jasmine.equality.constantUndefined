@@ -1,0 +1,4 @@
+# name: jasmineEqualityConstantUndefined
+# key: jecu
+# --
+Constant_.${1:field} !== undefined &&
