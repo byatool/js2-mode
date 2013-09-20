@@ -3,5 +3,5 @@
 # --
 
 var ${1:name} = createADiv({
-      'class': current.${2:class}
+      'class': constant.${2:class}
     });

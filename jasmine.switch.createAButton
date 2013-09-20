@@ -1,10 +1,10 @@
-# name: jasmineCreateADivSwitch
-# key: jcads
+# name: jasmineCreateAButtonSwitch
+# key: jcabs
 # --
 
-createADiv_ = function(attributes){
+createAButton_ = function(attributes){
   switch(attributes['class']) {
-    case Current_.${1:First}:
+    case Constant_.${1:First}:
       return ${2:Second};
     break;               
     default:

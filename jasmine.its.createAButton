@@ -1,0 +1,17 @@
+# name: jasmineCreateAButtonIts
+# key: itscab
+# --
+it('should create the ${1:Name} button.', function() {
+    var methodWasCalled = false;
+    createAButton_ = function(attributes, text){
+      methodWasCalled = methodWasCalled ||
+        attributes['type'] === 'button' &&
+        Constant_.$1ButtonText !== undefined &&
+        text === Constant_.$1ButtonText;
+    };
+    
+    callTheMethod_();
+    
+    expect(methodWasCalled).toBe(true);
+  });
+  

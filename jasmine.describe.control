@@ -1,4 +1,4 @@
-#name :describeControl
+ #name :describeControl
 # key: descc
 # --
 
@@ -11,11 +11,15 @@ goog.provide('src.test.control.$1.whenInitializing${1:$(transform-text text)}');
  @export
  */
 src.test.control.$1.whenInitializing${1:$(transform-text text)}.describe = function () {
+
     //Using
+
     var Current_ = src.base.control.$1;
-    
+    var Constant_ = src.base.control.$1.constant;
+
     
     //Fields
+
     var ParentContainerId_ = goog.string.getRandomString();
     var ParentContainerClass_ = goog.string.getRandomString();
 
@@ -25,16 +29,18 @@ src.test.control.$1.whenInitializing${1:$(transform-text text)}.describe = funct
     
     
     //Test Hooks
+
     beforeEach(function() {
         parentContainer_ = {};
 
         options_ = {};
-        options_[Current_.ContainerClass] = ParentContainerClass_;
-        options_[Current_.ContainerId] = ParentContainerId_;
+        options_[Constant_.ContainerClass] = ParentContainerClass_;
+        options_[Constant_.ContainerId] = ParentContainerId_;
     });
     
     
     //Support Methods
+
     var callTheMethod_ = function() {
         return Current_.initialize(options_, createADiv_);
     };
@@ -47,8 +53,10 @@ src.test.control.$1.whenInitializing${1:$(transform-text text)}.describe = funct
         
         createADiv_ = function(attributes) {
             methodWasCalled = methodWasCalled ||
-            (attributes['id'] === options_[Current_.ContainerId] &&
-            attributes['class'] === options_[Current_.ContainerClass]);
+            (Constant_.ContainerId !== undefined &&
+            attributes['id'] === options_[Constant_.ContainerId] &&
+            Constant_.ContainerClass !== undefined &&
+            attributes['class'] === options_[Constant_.ContainerClass]);
 
             return parentContainer_;
         };
@@ -70,22 +78,29 @@ describe('When initializing an $1, it', function() {
 
 
 
+goog.provide('src.base.control.$1.constant');
+
+/**
+ @const
+ @type {string}
+ @export
+ */
+src.base.control.$1.constant.ContainerId = 'containerId';
+
+
+/**
+ @const
+ @type {string}
+ @export
+ */
+src.base.control.$1.constant.ContainerClass = 'containerClass';
+
+
+
+
+goog.require('src.base.control.$1.constant');
+
 goog.provide('src.base.control.$1');
-
-/**
- @const
- @type {string}
- @export
- */
-src.base.control.$1.ContainerId = 'containerId';
-
-
-/**
- @const
- @type {string}
- @export
- */
-src.base.control.$1.ContainerClass = 'containerClass';
 
 
 /**
@@ -98,15 +113,16 @@ src.base.control.$1.ContainerClass = 'containerClass';
 src.base.control.$1.initialize = function(options, createADiv) {
   createADiv = createADiv ? createADiv : src.base.helper.domCreation.div;
 
-  var Current__ = src.base.control.$1;
+  var current = src.base.control.$1;
+  var constant = src.base.control.$1.constant;
 
   var container = createADiv({
-      'id': options[Current__.ContainerId],
-      'class': options[Current__.ContainerClass]
+      'id': options[constant.ContainerId],
+      'class': options[constant.ContainerClass]
       });
     
   return container;
 };
 
 
---namespace="src.test.control.$1.whenInitializing${1:$(transform-text text)}" ^
+//--namespace="src.test.control.$1.whenInitializing${1:$(transform-text text)}" ^

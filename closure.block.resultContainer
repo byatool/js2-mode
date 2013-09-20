@@ -1,0 +1,8 @@
+# name: googBlockResultContainer
+# key: gobrc
+# --
+var result = {};
+result[ViewConstant_.CreatedControl] = ${1:control};
+result[ViewConstant_.CreatedOptions] = ${2:options};
+
+return result;
