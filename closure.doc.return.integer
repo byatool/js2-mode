@@ -1,0 +1,4 @@
+# name: GoogleDocumentReturnInteger
+# key: godri
+# --
+@return {integer} ${1:description}.

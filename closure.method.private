@@ -1,0 +1,9 @@
+# name: GoogleMethodPrivate
+# key: gompri
+# --
+/**
+ @private
+ */
+${2:namespace}.${1:name}_ =
+  function() {
+  };

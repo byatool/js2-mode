@@ -1,0 +1,20 @@
+# name: jasmineItsCreateAForm
+# key: itscaf
+# --
+it('should create the form.', function() {
+    var methodWasCalled = false;
+    createAForm_ = function(attributes, text){
+      methodWasCalled = methodWasCalled ||
+       (Constant_.${1:Id} !== undefined && 
+        attributes['id'] === Constant_.$1  &&
+        attributes['class'] === Constant_.$1  &&
+        attributes['method'] === 'post' &&
+        attributes['action'] === ${2:url});
+        
+    };
+    
+    callTheMethod_();
+    
+    expect(methodWasCalled).toBe(true);
+  });
+  

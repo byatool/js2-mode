@@ -6,7 +6,7 @@ it('should create the ${1:Name} holder.', function() {
     
     createADiv_ = function(attributes){
       methodWasCalled = methodWasCalled ||
-        attributes['class'] === Constant_.${2:className};
+        attributes[ViewConstant_.Class] === Constant_.${2:className};
     };
     
     callTheMethod_();

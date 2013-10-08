@@ -1,8 +1,9 @@
- #name :describeControl
+#name: describeControl
 # key: descc
 # --
 
 goog.require('goog.string');
+goog.require('src.base.control.controlConstant');
 goog.require('src.base.control.${1:controlName}');
 
 goog.provide('src.test.control.$1.whenInitializing${1:$(transform-text text)}');
@@ -16,7 +17,7 @@ src.test.control.$1.whenInitializing${1:$(transform-text text)}.describe = funct
 
     var Current_ = src.base.control.$1;
     var Constant_ = src.base.control.$1.constant;
-
+var ControlConstant_ = src.base.control.controlConstant;
     
     //Fields
 
@@ -24,7 +25,6 @@ src.test.control.$1.whenInitializing${1:$(transform-text text)}.describe = funct
     var ParentContainerClass_ = goog.string.getRandomString();
 
     var createADiv_;
-    var options_;
     var parentContainer_;
     
     
@@ -32,10 +32,6 @@ src.test.control.$1.whenInitializing${1:$(transform-text text)}.describe = funct
 
     beforeEach(function() {
         parentContainer_ = {};
-
-        options_ = {};
-        options_[Constant_.ContainerClass] = ParentContainerClass_;
-        options_[Constant_.ContainerId] = ParentContainerId_;
     });
     
     
@@ -51,12 +47,12 @@ src.test.control.$1.whenInitializing${1:$(transform-text text)}.describe = funct
     it('should create a parent container.', function() {
         var methodWasCalled = false;
         
-        createADiv_ = function(attributes) {
-            methodWasCalled = methodWasCalled ||
-            (Constant_.ContainerId !== undefined &&
-            attributes['id'] === options_[Constant_.ContainerId] &&
-            Constant_.ContainerClass !== undefined &&
-            attributes['class'] === options_[Constant_.ContainerClass]);
+    createADiv_ = function(attributes) {
+      methodWasCalled = methodWasCalled ||
+        (Constant_.ContainerId !== undefined &&
+         Constant_.ContainerClass !== undefined &&
+         attributes[ControlConstant_.Id] === Constant_.ContainerId &&
+         attributes[ControlConstant_.Class] === Constant_.ContainerClass);
 
             return parentContainer_;
         };

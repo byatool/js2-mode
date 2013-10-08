@@ -1,5 +1,5 @@
-# name: googDomFindNode
-# key: gofn
+# name: GoogleDomFindNode
+# key: godfn
 # --
 goog.dom.findNode(${1:list}, function(node){
 return false;

@@ -1,0 +1,6 @@
+# name: GoogleFieldAnonymousSet
+# key: gofas
+# --
+${1:method}_ = function(${2:}){
+
+};

@@ -1,4 +1,0 @@
-# name: googRequire 
-# key: gorq
-# --
-goog.require('${1:goog.dom}');

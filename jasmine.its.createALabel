@@ -1,0 +1,17 @@
+# name: jasmineCreateALabel
+# key: itscal
+# --
+it('should create the ${1:Name} label.', function() {
+    var methodWasCalled = false;
+    
+    createALabel_ = function(attributes, text){
+      methodWasCalled = methodWasCalled ||
+        (attributes[ViewConstant_.Class] === Constant_.${2:className} &&
+        text === ${2:text});
+    };
+    
+    callTheMethod_();
+    
+    expect(methodWasCalled).toBe(true);
+  });
+  

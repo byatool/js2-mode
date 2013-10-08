@@ -1,4 +1,0 @@
-# name: googReturn
-# key: gore
-# --
-@return {${1:type}} ${3:description}.

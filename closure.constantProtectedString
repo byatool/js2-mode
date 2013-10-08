@@ -1,9 +1,0 @@
-# name: ProtectedConstantString
-# key: prcs
-# --
-
-/**
- @const
- @type {string}
- @protected
-*/

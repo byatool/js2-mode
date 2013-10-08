@@ -1,0 +1,4 @@
+# name: GoogleDocumetnReturnObject
+# key: godro
+# --
+@return {Object} ${1:description}

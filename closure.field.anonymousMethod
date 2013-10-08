@@ -1,0 +1,4 @@
+# name: GoogleFieldAnonymousMethod
+# key: gofam
+# --
+${1:method}_ = function(${2:}){};

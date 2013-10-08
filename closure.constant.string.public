@@ -1,0 +1,9 @@
+# name: GoogleConstantStringExported
+# key: gocsex
+# --
+
+/**
+ @const
+ @type {string}
+ @export
+*/

@@ -3,45 +3,45 @@
 # --
 
 goog.require('goog.string');
-goog.require('src.base.control.${1:controlName}');
+goog.require('src.base.control.${1:control}.${2:sub}');
+goog.require('src.base.control.$1.constant');
 
-goog.provide('src.test.control.$1.whenInitializing${1:$(transform-text text)}');
+goog.provide('src.test.control.$1.when${3:description}');
 
 /**
  @export
  */
-src.test.control.$1.whenInitializing${1:$(transform-text text)}.describe = function () {
+src.test.control.$1.when$3.describe = function () {
+
     //Using
-    var Current_ = src.base.control.$1;
+
+    var Constant_ = src.base.control.$1.constant;
+    var Current_ = src.base.control.$1.$2;
     
     
     //Fields
     
     
     //Test Hooks
+
     beforeEach(function() {
 
     });
     
     
     //Support Methods
+
     var callTheMethod_ = function() {
-    };
-    
-    
+        return Current_.${4:name};
+     };
+
     //Test Methods
+
 };
 
-
-describe('When initializing an $1, it', function() {
-    src.test.control.$1.whenInitializing${1:$(transform-text text)}.describe();
+describe('When ${5:long}, it', function() {
+    src.test.control.$1.when$3.describe();
 });
 
 
-
-goog.provide('src.base.control.$1');
-
-
-
-
---namespace="src.test.control.$1.whenInitializing${1:$(transform-text text)}" ^
+//--namespace="src.test.control.$1.when$3" ^

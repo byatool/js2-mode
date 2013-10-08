@@ -1,4 +1,0 @@
-# name: googAnonymousType
-# key: goat
-# --
-${1:name} = {};

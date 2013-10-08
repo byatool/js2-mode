@@ -1,0 +1,9 @@
+# name: GoogleMethodProtected
+# key: gompro
+# --
+/**
+ @protected
+ */
+${2:namespace}.${1:name} =
+  function() {
+  };

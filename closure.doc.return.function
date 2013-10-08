@@ -1,0 +1,4 @@
+# name: GoogleDocumentReturnFunction
+# key: godrf
+# --
+@return {function} ${1:description} 

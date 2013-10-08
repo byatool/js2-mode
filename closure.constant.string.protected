@@ -1,0 +1,9 @@
+# name: GoogleConstantStringProtected
+# key: gocsp
+# --
+
+/**
+ @const
+ @type {string}
+ @protected
+*/

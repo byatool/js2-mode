@@ -1,4 +1,0 @@
-# name: googAnonymousMethod
-# key: goam
-# --
-${1:method}_ = function(${2:}){};

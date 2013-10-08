@@ -1,0 +1,4 @@
+# name: GoogleDocumentReturnString
+# key: godrs
+# --
+@return {string} ${1:description} 

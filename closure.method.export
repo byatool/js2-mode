@@ -1,0 +1,9 @@
+# name: GoogleMethodExport
+# key: gomex
+# --
+/**
+ @export
+ */
+${2:namespace}.${1:name} =
+  function() {
+  };

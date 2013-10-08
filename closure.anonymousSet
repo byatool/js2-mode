@@ -1,6 +1,0 @@
-# name: googAnonymousSet
-# key: goas
-# --
-${1:method} = function(${2:}){
-
-};

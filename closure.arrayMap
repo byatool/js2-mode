@@ -1,7 +1,0 @@
-# name: googArrayMap
-# key: goam
-# --
-
-goog.array.map(${1:list}, function(currentItem){
-return {};
-});
