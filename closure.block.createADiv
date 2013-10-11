@@ -1,5 +1,5 @@
-# name: closureCreateADiv
-# key: gcad
+# name: GoogleBlockCreateDiv
+# key: gobcad
 # --
 
 var ${1:name} = createADiv({

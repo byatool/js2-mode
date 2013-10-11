@@ -1,0 +1,10 @@
+# name: GoogleBlockConstantStringProtected
+# key: gobcsp
+# --
+
+/**
+ @const
+ @type {string}
+ @protected
+ */
+${1:namespace}.constant.${2:name} = '${3:text}';

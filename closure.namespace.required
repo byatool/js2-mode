@@ -1,4 +1,4 @@
 # name: GoogleNamespaceRequired 
-# key: gonrq
+# key: gonr
 # --
 goog.require('${1:goog.dom}');

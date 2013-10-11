@@ -1,4 +1,4 @@
-# name: googParamFunction
-# key: gopaf
+# name: GoogleDocParameterFunction
+# key: godpf
 # --
 @param {function} ${1:name} ${2:description}.

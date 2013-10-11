@@ -1,0 +1,4 @@
+# name: GoogleNamespaceProvide
+# key: gonp
+# --
+goog.provide('${1:namespace}');

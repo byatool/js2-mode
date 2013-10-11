@@ -1,4 +1,0 @@
-# name: describeView
-# key: descv
-# -- 
-goog.require('goog.string');

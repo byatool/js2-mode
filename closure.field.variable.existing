@@ -1,0 +1,4 @@
+# name: GoogleFieldVariableExisting
+# key: gofve
+# --
+${1:name} = {};

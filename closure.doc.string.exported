@@ -1,0 +1,9 @@
+# name: GoogleDocumentStringExported
+# key: godsex
+# --
+
+/**
+ @const
+ @type {string}
+ @export
+*/

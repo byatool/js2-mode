@@ -1,5 +1,5 @@
-# name: GoogleMethodProtected
-# key: gompro
+# name: GoogleBlockFunctionProtected
+# key: gobfp
 # --
 /**
  @protected

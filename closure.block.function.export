@@ -1,5 +1,5 @@
-# name: GoogleMethodExport
-# key: gomex
+# name: GoogleBlockFunctionExport
+# key: gobfe
 # --
 /**
  @export

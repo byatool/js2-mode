@@ -1,0 +1,5 @@
+# name: GoogleGlobalConstantControl
+# key: gogcc
+# --
+
+var Constant_ = src.base.control.${1:Name}.constant;
