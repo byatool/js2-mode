@@ -1,0 +1,19 @@
+# name: jasmineBlockTestFindNode
+# key: jabtfn
+# --
+it('should find the ${3:text}.', function() {
+           var methodWasCalled = false;
+           var item = {};
+           item[ViewConstant_.Id] = Constant_.${1:id};
+           
+           findNode_ = function(parent, toFind){
+           methodWasCalled = methodWasCalled ||
+           (Constant_.$1 !== undefined &&
+                         parent === ${2:parent} &&
+                         toFind(item));
+           };
+           
+           callTheMethod_();
+           
+           expect(methodWasCalled).toBe(true);
+           });

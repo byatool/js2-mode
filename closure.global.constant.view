@@ -1,0 +1,5 @@
+# name: GoogleGlobalConstantView
+# key: gogcv
+# --
+
+var Constant_ = src.site.view.${1:Name}.constant;

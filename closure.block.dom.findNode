@@ -1,0 +1,7 @@
+# name: GoogleBlockDomFindNode
+# key: gobdf
+# --
+
+var ${1:name}  = findNode(theForm, function(node) {
+  return node[ViewConstant_.Id] === Constant_.${1:$(to-lower text)};
+});

@@ -1,4 +1,4 @@
 # name: googParamObject
-# key: gopao
+# key: godpo
 # --
 @param {Object} ${1:name} ${2:description}.
