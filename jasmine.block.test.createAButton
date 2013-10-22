@@ -1,0 +1,19 @@
+# name: jasmineBlockTestCreateAButton
+# key: jabtcab
+# --
+it('should create the ${1:Name} button.', function() {
+    var methodWasCalled = false;
+    createAButton_ = function(attributes, text){
+      methodWasCalled = methodWasCalled ||
+     (Constant_.$1Button !== undefined &&  
+      attributes[ViewConstant_.ButtonType] === ViewConstant_.ButtonButton &&
+      attributes[ViewConstant_.Id] === Constant_.$1Button &&
+      attributes[ViewConstant_.Class] === Constant_.$1Button) &&
+      text === Constant_.$1ButtonText;
+    };
+    
+    callTheMethod_();
+    
+    expect(methodWasCalled).toBe(true);
+  });
+  

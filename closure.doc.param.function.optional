@@ -1,0 +1,4 @@
+# name: GoogleDocParameterFunctionOptional
+# key: godpfo
+# --
+@param {?function} ${1:name} ${2:description}.

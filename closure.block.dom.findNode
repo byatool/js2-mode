@@ -1,5 +1,5 @@
 # name: GoogleBlockDomFindNode
-# key: gobdf
+# key: gobdfn
 # --
 
 var ${1:name}  = findNode(theForm, function(node) {
