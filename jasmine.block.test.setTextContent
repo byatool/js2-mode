@@ -1,5 +1,5 @@
-# name: jasmineItsSetTextContent
-# key: itsstc
+# name: jasmineItShouldSetTextContent
+# key: jabtstc
 # --
 it('should set the text of the ${1:Name} container.', function() {
     var methodWasCalled = false;
