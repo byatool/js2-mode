@@ -1,10 +1,11 @@
-#name: describeControl
-# key: descc
+#name: JasmineBlockDescribeControlAdvanced
+# key: jabdca
 # --
 
 goog.require('goog.string');
 goog.require('src.base.control.controlConstant');
 goog.require('src.base.control.${1:controlName}');
+goog.require('src.base.control.$1.constant');
 
 goog.provide('src.test.control.$1.whenInitializing${1:$(transform-text text)}');
 
@@ -38,7 +39,7 @@ var ControlConstant_ = src.base.control.controlConstant;
     //Support Methods
 
     var callTheMethod_ = function() {
-        return Current_.initialize(options_, createADiv_);
+        return Current_.initialize(ParentContainerId_, createADiv_);
     };
     
     
@@ -49,10 +50,8 @@ var ControlConstant_ = src.base.control.controlConstant;
         
     createADiv_ = function(attributes) {
       methodWasCalled = methodWasCalled ||
-        (Constant_.ContainerId !== undefined &&
-         Constant_.ContainerClass !== undefined &&
-         attributes[ControlConstant_.Id] === Constant_.ContainerId &&
-         attributes[ControlConstant_.Class] === Constant_.ContainerClass);
+        (attributes[ControlConstant_.Id] === ParentContainerId_ &&
+         attributes[ControlConstant_.Class] === ParentContainerId_);
 
             return parentContainer_;
         };
@@ -74,51 +73,49 @@ describe('When initializing an $1, it', function() {
 
 
 
+
 goog.provide('src.base.control.$1.constant');
 
-/**
- @const
- @type {string}
- @export
- */
-src.base.control.$1.constant.ContainerId = 'containerId';
-
-
-/**
- @const
- @type {string}
- @export
- */
-src.base.control.$1.constant.ContainerClass = 'containerClass';
 
 
 
 
+goog.require('src.base.control.controlConstant');
 goog.require('src.base.control.$1.constant');
+goog.require('src.base.helper.domCreation');
+
 
 goog.provide('src.base.control.$1');
 
 
 /**
- @param {Array} options The needed options to build the form.
+ @param {string} containerId The id for the overall container.
  @param {?function} createADiv The method used  to create a 
  div element.
  @return {Object} The created control.
  @export
  */
-src.base.control.$1.initialize = function(options, createADiv) {
-  createADiv = createADiv ? createADiv : src.base.helper.domCreation.div;
-
-  var current = src.base.control.$1;
-  var constant = src.base.control.$1.constant;
-
-  var container = createADiv({
-      'id': options[constant.ContainerId],
-      'class': options[constant.ContainerClass]
-      });
-    
-  return container;
-};
+src.base.control.$1.initialize = 
+  function(containerId, createADiv) {
+    createADiv = createADiv ? 
+    createADiv : 
+    src.base.helper.domCreation.div;
+  
+    /* START */
+  
+    var Constant_ = src.base.control.$1.Constant_;
+    var ControlConstant_ = src.base.control.controlConstant;
+    var Current_  = src.base.control.$1;
+  
+  
+    var containerAttributes = {};
+    containerAttributes[ControlConstant_.Id] = containerId;
+    containerAttributes[ControlConstant_.Class] = containerId;
+    var container = createADiv(containerAttributes);
+  
+      
+    return container;
+  };
 
 
 //--namespace="src.test.control.$1.whenInitializing${1:$(transform-text text)}" ^

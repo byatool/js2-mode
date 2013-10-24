@@ -1,5 +1,5 @@
-# name: jasmineCrateADivTest
-# key: itscad
+# name: jasmineBlockTestCreateADiv
+# key: jabtcad
 # --
 it('should create the ${1:Name} holder.', function() {
     var methodWasCalled = false;
