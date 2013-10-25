@@ -1,5 +1,5 @@
-# name: jasmineAppendChildTest
-# key: itsac
+# name: jasmineBlockTestAppendChild
+# key: jabtac
 # --
 
 it('should append the ${1:child} to the ${2:parent}.', function() {

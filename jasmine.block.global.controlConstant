@@ -1,0 +1,7 @@
+# name: jasmineBlockGlobalControlConstant
+# key: jabgcc
+# --
+
+goog.require('src.base.control.controlConstant');
+
+var ControlConstant_ = src.base.control.controlConstant;

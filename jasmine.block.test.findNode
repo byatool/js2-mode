@@ -4,7 +4,7 @@
 it('should find the ${3:text}.', function() {
            var methodWasCalled = false;
            var item = {};
-           item[ViewConstant_.Id] = Constant_.${1:id};
+           item[ControlConstant_.Id] = Constant_.${1:id};
            
            findNode_ = function(parent, toFind){
            methodWasCalled = methodWasCalled ||

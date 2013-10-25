@@ -1,4 +1,4 @@
-# name: jasmineItShouldSetTextContent
+# name: JasmineBlockTestShouldSetTextContent
 # key: jabtstc
 # --
 it('should set the text of the ${1:Name} container.', function() {

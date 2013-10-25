@@ -1,12 +1,12 @@
-#name: describeGeneric
-# key: descg
+#name: JasmineBlockDescribeControlSimple
+# key: jabdcs
 # --
 
 goog.require('goog.string');
 goog.require('src.base.control.${1:control}.${2:sub}');
-goog.require('src.base.control.$1.constant');
+goog.require('src.base.control.$1.$2.constant');
 
-goog.provide('src.test.control.$1.when${3:description}');
+goog.provide('src.test.control.$1.$2.when${3:description}');
 
 /**
  @export
@@ -40,8 +40,8 @@ src.test.control.$1.when$3.describe = function () {
 };
 
 describe('When ${5:long}, it', function() {
-    src.test.control.$1.when$3.describe();
+    src.test.control.$1.$2.when$3.describe();
 });
 
 
-//--namespace="src.test.control.$1.when$3" ^
+//--namespace="src.test.control.$1.$2.when$3" ^

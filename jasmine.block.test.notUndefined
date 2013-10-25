@@ -1,0 +1,4 @@
+# name: JasmineBlockTestNotUndefined
+# key: jabtnu
+# --
+Constant_.${1:name} !== undefined && 

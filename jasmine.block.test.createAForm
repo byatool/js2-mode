@@ -1,15 +1,15 @@
-# name: jasmineItsCreateAForm
-# key: itscaf
+# name: jasmineBlockTestCreateForm
+# key: jabtcf
 # --
 it('should create the form.', function() {
     var methodWasCalled = false;
     createAForm_ = function(attributes, text){
       methodWasCalled = methodWasCalled ||
        (Constant_.${1:Id} !== undefined && 
-        attributes['id'] === Constant_.$1  &&
-        attributes['class'] === Constant_.$1  &&
-        attributes['method'] === 'post' &&
-        attributes['action'] === ${2:url});
+        attributes[ControlConstant_.Id] === Constant_.$1  &&
+        attributes[ControlConstant_.Class] === Constant_.$1  &&
+        attributes[ControlConstant_.Method] === ControlConstant_.Post &&
+        attributes[ControlConstant_.Action] === ${2:url});
         
     };
     
