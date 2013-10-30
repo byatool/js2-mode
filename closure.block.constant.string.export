@@ -1,0 +1,10 @@
+# name: GoogleBlockConstantStringExport
+# key: gobcse
+# --
+
+/**
+ @const
+ @type {string}
+ @exported
+ */
+${1:namespace}.constant.${2:name} = '${3:text}';
