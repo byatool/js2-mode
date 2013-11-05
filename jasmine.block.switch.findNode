@@ -1,0 +1,12 @@
+# name: jasmineBlockSwitchFindNode
+# key: jabsfn
+# --
+
+findNode_ = function(parent, toFind){
+  switch(toFind()) {
+    case Constant_.${1:First}:
+      return ${2:Second};
+    break;               
+    default:
+      return $2;                      
+  }};

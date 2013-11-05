@@ -1,0 +1,47 @@
+#name: JasmineBlockDescribeViewGeneric
+# key: jabdvg
+# --
+
+goog.require('goog.string');
+goog.require('src.site.view.${1:view}');
+goog.require('src.site.view.$1.constant');
+
+goog.provide('src.test.view.$1.when${2:description}');
+
+/**
+ @export
+ */
+src.test.view.$1.when$2.describe = function () {
+
+    //Using
+
+    var Constant_ = src.site.view.$1.constant;
+    var Current_ = src.site.view.$1;
+    
+    
+    //Fields
+    
+    
+    //Test Hooks
+
+    beforeEach(function() {
+
+    });
+    
+    
+    //Support Methods
+
+    var callTheMethod_ = function() {
+        return Current_.${3:name};
+     };
+
+    //Test Methods
+
+};
+
+describe('When ${5:long}, it', function() {
+    src.test.view.$1.when$2.describe();
+});
+
+
+//--namespace="src.test.view.$1.when$2" ^

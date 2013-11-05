@@ -1,0 +1,16 @@
+# name: jasmineBlockTestGetElementByClass
+# key: jabtgebc
+# --
+it('should find the ${1:text}.', function() {
+           var methodWasCalled = false;
+           getElementByClass_ = function(parent, cssClass) {
+           methodWasCalled = methodWasCalled ||
+           (Constant_.${3:class} !== undefined &&
+           parent === ${2:parent} &&
+           cssClass === Constant_.$3);
+           };
+
+           callTheMethod_();
+           expect(methodWasCalled).toBe(true);
+});
+

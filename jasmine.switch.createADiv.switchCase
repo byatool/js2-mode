@@ -1,7 +1,0 @@
-# name: jasmineCreateADivSwitchCase
-# key: jcadc
-# --
-
-case Constant_.${1:One}:
-  return ${2:Two};
-  break;

@@ -1,0 +1,7 @@
+# name: jasmineBlockSwitchCase
+# key: jabsc
+# --
+
+case Constant_.${1:One}:
+  return ${2:Two};
+  break;

@@ -1,0 +1,4 @@
+# name: jasmineShortEqualityEqual
+# key: jasee
+# --
+${1:name} === $1_ &&
