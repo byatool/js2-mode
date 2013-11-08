@@ -1,0 +1,5 @@
+# name: GoogleGlobalConstantBase
+# key: gogcb
+# --
+
+var ControlConstant_ = src.base.control.controlConstant;

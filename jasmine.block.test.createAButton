@@ -6,9 +6,9 @@ it('should create the ${1:name} button.', function() {
     createAButton_ = function(attributes, text){
       methodWasCalled = methodWasCalled ||
      (Constant_.Button$1 !== undefined &&  
-      attributes[${2:constant}Constant_.ButtonType] === ControlConstant_.Button &&
-      attributes[$2Constant_.Id] === Constant_.Button$1 &&
-      attributes[$2Constant_.Class] === Constant_.Button$1) &&
+      attributes[ControlConstant_.Type] === ControlConstant_.Button &&
+      attributes[ControlConstant_.Id] === Constant_.Button$1 &&
+      attributes[ControlConstant_.Class] === Constant_.Button$1) &&
       text === Constant_.Button$1Text;
     };
     

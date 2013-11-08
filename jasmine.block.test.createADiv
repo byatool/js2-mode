@@ -7,7 +7,7 @@ it('should create the ${1:Name} holder.', function() {
     createADiv_ = function(attributes){
       methodWasCalled = methodWasCalled ||
         (Constant_.$2 !== undefined &&
-        attributes[ViewConstant_.Class] === Constant_.${2:className});
+        attributes[ControlConstant_.Class] === Constant_.${2:className});
     };
     
     callTheMethod_();

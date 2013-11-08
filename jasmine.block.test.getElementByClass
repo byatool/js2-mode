@@ -3,7 +3,7 @@
 # --
 it('should find the ${1:text}.', function() {
            var methodWasCalled = false;
-           getElementByClass_ = function(parent, cssClass) {
+           getElementByClass_ = function(cssClass, parent) {
            methodWasCalled = methodWasCalled ||
            (Constant_.${3:class} !== undefined &&
            parent === ${2:parent} &&

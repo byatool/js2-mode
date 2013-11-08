@@ -1,0 +1,19 @@
+# name: jasmineBlockTestCreateATextbox
+# key: jabtcat
+# --
+it('should create the ${1:Name}.', function() {
+    var methodWasCalled = false;
+    
+    createATextbox_ = function(attributes){
+      methodWasCalled = methodWasCalled ||
+        (Constant_.$2 !== undefined &&
+        attributes[ControlConstant_.Class] === Constant_.${2:className} &&
+        attributes[ControlConstant_.Id] === Constant_.${2:className} &&
+        attributes[ControlConstant_.Name] === Constant_.${2:className});
+    };
+    
+    callTheMethod_();
+    
+    expect(methodWasCalled).toBe(true);
+  });
+  
