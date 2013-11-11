@@ -1,10 +1,10 @@
-#name: JasmineBlockDescribeControlSimple
-# key: jabdcs
+#name: JasmineDescribeControlGeneric
+# key: jadcg
 # --
 
 goog.require('goog.string');
 goog.require('src.base.control.${1:control}.${2:sub}');
-goog.require('src.base.control.$1.$2.constant');
+goog.require('src.base.control.$1.constant');
 
 goog.provide('src.test.control.$1.$2.when${3:description}');
 

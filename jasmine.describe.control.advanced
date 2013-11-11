@@ -1,5 +1,5 @@
-#name: JasmineBlockDescribeControlAdvanced
-# key: jabdca
+#name: JasmineDescribeControlAdvanced
+# key: jadca
 # --
 
 goog.require('goog.string');
