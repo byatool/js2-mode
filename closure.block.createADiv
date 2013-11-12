@@ -2,6 +2,7 @@
 # key: gobcad
 # --
 
-var ${1:name} = createADiv({
-      'class': constant.${2:class}
-    });
+var ${1:name}Attributes = {};
+$1Attributes[ControlConstant_.Class] = ${2:class};
+$1Attributes[ControlConstant_.Id] = ${2:class};
+var $1 = createADiv($1Attributes);
