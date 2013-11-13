@@ -1,0 +1,7 @@
+# name: googTernaryMethodGetElement
+# key: gotmge
+# --
+
+getElement = getElement ?
+getElement :
+goog.dom.getElement;

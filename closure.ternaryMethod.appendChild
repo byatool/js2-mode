@@ -1,0 +1,7 @@
+# name: googTernaryMethodAppendChild
+# key: gotmac
+# --
+
+appendChild = appendChild ?
+appendChild :
+goog.dom.appendChild;

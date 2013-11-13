@@ -1,0 +1,7 @@
+# name: googTernaryMethodCreadADiv
+# key: gotmcad
+# --
+
+createADiv = createADiv ?
+createADiv :
+goog.dom.createADiv;

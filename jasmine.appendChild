@@ -1,8 +1,0 @@
-# name: jasmineAppendChild
-# key: jac
-# --
-
-appendChild_ = function(parent, child){
-methodWasCalled = methodWasCalled || 
-(parent === ${1:parent} && child === ${2:child});
-};

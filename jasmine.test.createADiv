@@ -1,0 +1,17 @@
+# name: jasmineTestCreateADiv
+# key: jatcad
+# --
+it('should create the ${1:name} holder.', function() {
+    var methodWasCalled = false;
+    
+    createADiv_ = function(attributes){
+      methodWasCalled = methodWasCalled ||
+        (Constant_.${2:class} !== undefined &&
+         attributes[ControlConstant_.Class] === Constant_.$2);
+    };
+    
+    callTheMethod_();
+    
+    expect(methodWasCalled).toBe(true);
+  });
+  

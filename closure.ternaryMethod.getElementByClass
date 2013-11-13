@@ -1,0 +1,7 @@
+# name: googTernaryMethodGetElementByClass
+# key: gotmgebc
+# --
+
+getElementByClass = getElementByClass ?
+getElementByClass :
+goog.dom.getElementByClass;

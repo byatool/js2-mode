@@ -1,9 +1,9 @@
-# name: jasmineCreateADivSwitch
-# key: jcads
+# name: jasmineSwitchCreateADiv
+# key: jascad
 # --
 
 createADiv_ = function(attributes){
-  switch(attributes['class']) {
+  switch(attributes[ConstantControl_.Class]) {
     case Constant_.${1:First}:
       return ${2:Second};
     break;               

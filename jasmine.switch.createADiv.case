@@ -1,5 +1,5 @@
-# name: jasmineBlockSwitchCase
-# key: jabsc
+# name: jasmineSwitchCreateADivCase
+# key: jascadc
 # --
 
 case Constant_.${1:One}:
