@@ -4,4 +4,4 @@
 
 createADiv = createADiv ?
 createADiv :
-goog.dom.createADiv;
+src.base.helper.domCreation.div;

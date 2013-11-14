@@ -1,5 +1,5 @@
-# name: JasmineBlockTestShouldSetTextContent
-# key: jabtstc
+# name: JasmineTestSetTextContent
+# key: jatstc
 # --
 it('should set the text of the ${1:Name} container.', function() {
     var methodWasCalled = false;

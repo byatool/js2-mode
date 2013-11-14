@@ -3,6 +3,6 @@
 # --
 
 var ${1:name}Attributes = {};
-$1Attributes[ControlConstant_.Class] = ${2:class};
-$1Attributes[ControlConstant_.Id] = ${2:class};
+$1Attributes[ControlConstant_.Class] = Constant_.$2;
+$1Attributes[ControlConstant_.Id] = Constant_.${2:class};
 var $1 = createADiv($1Attributes);
