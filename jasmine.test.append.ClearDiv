@@ -1,0 +1,21 @@
+# name: jasmineTestAppendClearDiv
+# key: jatacd
+# --
+it('should append a clear div.', function() {
+    var methodWasCalled = false;
+    var clearDiv = {};
+    
+    createClearDiv_ = function() {
+    return clearDiv;
+    };
+
+    appendChild_ = function(parent, child){
+      methodWasCalled = methodWasCalled || 
+        (parent === ${1:parent} && child === clearDiv);
+    };
+    
+    callTheMethod_();
+    
+    expect(methodWasCalled).toBe(true);
+  });
+  

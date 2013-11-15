@@ -11,7 +11,7 @@ goog.provide('src.test.control.$1.$2.when${3:description}');
 /**
  @export
  */
-src.test.control.$1.when$3.describe = function () {
+src.test.control.$1.$2.when$3.describe = function () {
 
     //Using
 

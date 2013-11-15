@@ -1,0 +1,7 @@
+# name: googTernaryMethodForEach
+# key: gotmfe
+# --
+
+forEach = forEach ?
+forEach :
+goog.array.forEach;
