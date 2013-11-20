@@ -1,0 +1,19 @@
+# name: jasmineTestCreateAButton
+# key: jatcab
+# --
+it('should create the ${1:name} button.', function() {
+    var methodWasCalled = false;
+    
+    createAButton_ = function(attributes, text){
+      methodWasCalled = methodWasCalled ||
+      (Constant_.${2:class} !== undefined &&
+      attributes[ControlConstant_.Id] === Constant_.$1Button &&
+      attributes[ControlConstant_.Type] === ControlConstant_.Button &&
+      attributes[ControlConstant_.Class] === Constant_.$2);
+    };
+    
+    callTheMethod_();
+    
+    expect(methodWasCalled).toBe(true);
+  });
+  

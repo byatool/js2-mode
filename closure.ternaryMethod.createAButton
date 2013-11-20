@@ -1,0 +1,7 @@
+# name: googTernaryMethodCreateAButton
+# key: gotmcab
+# --
+
+createAButton = createAButton ?
+createAButton :
+src.base.helper.domCreation.button;
