@@ -1,0 +1,7 @@
+# name: googTernaryMethodCreateATextbox
+# key: gotmcat
+# --
+
+createATextbox = createATextbox ?
+createATextbox :
+src.base.helper.domCreation.textbox;

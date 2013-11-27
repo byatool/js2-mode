@@ -1,0 +1,7 @@
+# name: googTernaryMethodCreateAClearDiv
+# key: gotmcacd
+# --
+
+createAClearDiv = createAClearDiv ?
+createAClearDiv :
+src.base.helper.domCreation.createAClearDiv;

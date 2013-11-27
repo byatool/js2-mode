@@ -1,0 +1,7 @@
+# name: googTernaryMethodCreateALabel
+# key: gotmcal
+# --
+
+createALabel = createALabel ?
+createALabel :
+src.base.helper.domCreation.label;

@@ -1,9 +1,11 @@
-3#name :describeView
-# key: descv
+#name jasmineDescribeView
+# key: jadv
 # --
 
 goog.require('goog.string');
+goog.require('src.base.control.controlConstant');
 goog.require('src.site.view.${1:controlName}');
+
 
 goog.provide('src.test.view.$1.whenInitializing${1:$(transform-text text)}');
 
@@ -13,8 +15,11 @@ goog.provide('src.test.view.$1.whenInitializing${1:$(transform-text text)}');
 src.test.view.$1.whenInitializing${1:$(transform-text text)}.describe = function () {
 
     //Using
+
+    var Constant_ = src.site.view.$1.constant;
     var Current_ = src.site.view.$1;
-    
+    var ControlConstant_ = src.base.control.controlConstant;    
+
     
     //Fields
 
@@ -29,11 +34,10 @@ src.test.view.$1.whenInitializing${1:$(transform-text text)}.describe = function
 
     beforeEach(function() {
         parentContainer_ = {};
-        options_ = {};
-        options_[Current_.ContainerId] = ContainerId_;
+
         createADiv_ = function(attributes){
-         switch(attributes['class']) {
-         case ContainerId_:
+         switch(attributes[ControlConstant_.Class]) {
+         case Constant_.ContainerClass:
               return parentContainer_;
               break;               
          default:
@@ -45,7 +49,7 @@ src.test.view.$1.whenInitializing${1:$(transform-text text)}.describe = function
     
     //Support Methods
     var callTheMethod_ = function() {
-        return Current_.initialize(options_, createADiv_);
+        return Current_.initialize(ContainerId_, createADiv_);
     };
     
     
@@ -56,8 +60,9 @@ src.test.view.$1.whenInitializing${1:$(transform-text text)}.describe = function
         
         createADiv_ = function(attributes) {
             methodWasCalled = methodWasCalled ||
-            (attributes['id'] === ContainerId_&&
-            attributes['class'] === ContainerId_);
+            (Constant_.ContainerClass !== undefined &&
+             attributes[ControlConstant_.Id] === ContainerId_&&
+             attributes[ControlConstant_.Class] === Constant_.ContainerClass);
 
             return parentContainer_;
         };
@@ -72,46 +77,56 @@ src.test.view.$1.whenInitializing${1:$(transform-text text)}.describe = function
     });    
 };
 
-
-goog.require('src.base.helper.domCreation');
-goog.provide('src.site.view.$1');
-
-
-/**
- @const
- @type {string}
- @export
- */
-src.site.view.$1.ContainerId = 'containerId';
-
-
-/**
- @param {Array} options The needed options to build the form.
- @param {?function} createADiv The method used  to create a 
- div element.
- @return {Object} The created control.
- @export
- */
-src.site.view.$1.initialize = function(options, createADiv) {
-
-  createADiv = createADiv ? 
-             createADiv : 
-             src.base.helper.domCreation.div;
-
-  var current = src.site.view.$1;
-
-  var container = createADiv({
-      'id': options[current.ContainerId],
-      'class': options[current.ContainerId]
-      });
-    
-  return container;
-};
-
-
-describe('When refreshing an $1, it', function() {
+describe('When refreshing ${1:$(transform-text text)}, it', function() {
     src.test.view.$1.whenInitializing${1:$(transform-text text)}.describe();
 });
 
 
 //--namespace="src.test.view.$1.whenInitializing${1:$(transform-text text)}" ^
+
+
+
+
+goog.provide('src.site.view.$1.constant');
+
+
+/**
+ @const
+ @type {string}
+ @protected
+ */
+src.site.view.mainContent.constant.ContainerClass = '$1Container';
+
+
+goog.require('src.base.control.controlConstant');
+goog.require('src.base.helper.domCreation');
+goog.require('src.site.view.$1.constant');
+
+
+goog.provide('src.site.view.$1');
+
+/**
+ @param {string} containerId The id for the parent container.
+ @param {?function} createADiv The method used  to create a 
+ div element.
+ @return {Object} The created control.
+ @export
+ */
+src.site.view.$1.initialize = function(containerId, createADiv) {
+
+  createADiv = createADiv ? 
+             createADiv : 
+             src.base.helper.domCreation.div;
+
+  /* Start */
+
+  var Constant_ = src.site.view.$1.constant;
+  var ControlConstant_ = src.base.control.controlConstant;
+  
+  var containerAttributes = {};
+  containerAttributes[ControlConstant_.Id] = containerId;
+  containerAttributes[ControlConstant_.Class] = Constant_.ContainerClass;
+  var container = createADiv(containerAttributes);
+    
+  return container;
+};

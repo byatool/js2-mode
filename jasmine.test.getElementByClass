@@ -1,5 +1,5 @@
-# name: jasmineBlockTestGetElementByClass
-# key: jabtgebc
+# name: jasmineTestGetElementByClass
+# key: jatgebc
 # --
 it('should find the ${1:text}.', function() {
            var methodWasCalled = false;
