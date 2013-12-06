@@ -3,10 +3,17 @@
 # --
 
 goog.require('goog.string');
+goog.require('src.base.control.controlConstant');
 goog.require('src.site.view.${1:controlName}');
 
 
 goog.provide('src.test.view.$1.when${2:testName}');
+
+  //Using
+
+  var Constant_ = src.site.view.$1.constant;
+  var Current_ = src.site.view.$1;
+  var ControlConstant_ = src.base.control.controlConstant;    
 
 /**
  @export
@@ -34,7 +41,7 @@ src.test.view.$1.when$2.describe = function () {
     
     //Support Methods
     var callTheMethod_ = function() {
-        return Current_.
+        return Current_.${3:name}
     };
     
     
@@ -44,7 +51,7 @@ src.test.view.$1.when$2.describe = function () {
 
 
 
-describe('When ${3:desc} , it', function() {
+describe('When ${4:desc} , it', function() {
     src.test.view.$1.when$2.describe();
 });
 

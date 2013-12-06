@@ -1,5 +1,5 @@
-#name jasmineDescribeView
-# key: jadv
+#name jasmineDescribeViewAdvanced
+# key: jadva
 # --
 
 goog.require('goog.string');
@@ -95,7 +95,7 @@ goog.provide('src.site.view.$1.constant');
  @type {string}
  @protected
  */
-src.site.view.mainContent.constant.ContainerClass = '$1Container';
+src.site.view.$1.constant.ContainerClass = '$1Container';
 
 
 goog.require('src.base.control.controlConstant');
