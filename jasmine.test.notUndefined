@@ -1,0 +1,4 @@
+# name: JasmineTestNotUndefined
+# key: jatnu
+# --
+Constant_.${1:name} !== undefined && 

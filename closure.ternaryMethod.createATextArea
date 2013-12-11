@@ -1,0 +1,7 @@
+# name: googTernaryMethodCreateATextArea
+# key: gotmcata
+# --
+
+createATextArea = createATextArea ?
+createATextArea :
+src.base.helper.domCreation.textarea;

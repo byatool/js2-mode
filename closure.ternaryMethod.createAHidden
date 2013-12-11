@@ -1,0 +1,7 @@
+# name: googTernaryMethodCreateAHidden
+# key: gotmcah
+# --
+
+createAHidden = createAHidden ?
+createAHidden :
+src.base.helper.domCreation.hidden;

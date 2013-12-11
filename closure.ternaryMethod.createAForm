@@ -1,0 +1,7 @@
+# name: googTernaryMethodCreateAForm
+# key: gotmcaf
+# --
+
+createAForm = createAForm ?
+createAForm :
+src.base.helper.domCreation.form;

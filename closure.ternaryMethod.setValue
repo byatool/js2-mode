@@ -1,0 +1,7 @@
+# name: googTernaryMethodSetValue
+# key: gotmsv
+# --
+
+setValue = setValue ?
+setValue :
+goog.dom.forms.setValue;
