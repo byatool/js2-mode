@@ -1,0 +1,67 @@
+#name :describeViewChild
+# key: jadvc
+# --
+
+goog.require('goog.string');
+goog.require('src.base.control.controlConstant');
+goog.require('src.site.view.${1:parent}.${2:controlName}');
+
+
+goog.provide('src.test.view.$1.$2.when${3:testName}');
+
+
+/**
+ @export
+ */
+src.test.view.$1.$2.when$3.describe = function () {
+
+    //Using
+
+    var Constant_ = src.site.view.$1.constant;
+    var Current_ = src.site.view.$1.$2;
+    var ControlConstant_ = src.base.control.controlConstant;    
+
+        
+    //Fields
+    
+    
+    //Test Hooks
+
+    beforeEach(function() {
+
+    });
+    
+    
+    //Support Methods
+    var callTheMethod_ = function() {
+        return Current_.${4:name}();
+    };
+    
+    
+    //Test Methods
+
+};
+
+
+
+describe('When ${5:desc} , it', function() {
+    src.test.view.$1.$2.when$3.describe();
+});
+
+
+//--namespace="src.test.view.$1.$2.when$3" ^
+
+
+// PAGE
+goog.require('src.site.view.$1.constant');
+
+goog.provide('src.site.view.$1.$2');
+
+
+/**
+ @protected
+ */
+src.site.view.$1.$2.$4 =
+  function() {
+    
+  };

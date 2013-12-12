@@ -9,11 +9,6 @@ goog.require('src.site.view.${1:controlName}');
 
 goog.provide('src.test.view.$1.when${2:testName}');
 
-  //Using
-
-  var Constant_ = src.site.view.$1.constant;
-  var Current_ = src.site.view.$1;
-  var ControlConstant_ = src.base.control.controlConstant;    
 
 /**
  @export
@@ -22,7 +17,10 @@ src.test.view.$1.when$2.describe = function () {
 
     //Using
 
+    var Constant_ = src.site.view.$1.constant;
     var Current_ = src.site.view.$1;
+    var ControlConstant_ = src.base.control.controlConstant;    
+
     
     
     //Fields
